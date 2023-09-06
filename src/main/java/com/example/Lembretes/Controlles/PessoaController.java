@@ -31,7 +31,8 @@ public class PessoaController {
     public ResponseEntity<?> adicionarPessoa(@RequestBody Pessoa pessoa) {
         try {
             Pessoa novoPessoa = service.adicionarPessoa(pessoa);
-            return ResponseEntity.ok("Pessoa cadastrado com Sucesso");        } catch (Exception e) {
+            return ResponseEntity.ok("Pessoa cadastrado com Sucesso");
+        }catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
     }
